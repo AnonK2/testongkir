@@ -111,12 +111,7 @@ class Ongkoskirim_Id_Public {
 
 
 	public function add_ongkoskirim_id_shipping_method( $methods ) {
-		if ( class_exists( 'Ongkoskirim_Id_Shipping_Method' ) ) {
-			// $methods[ 'ongkoskirim-id' ] = 'Ongkoskirim_Id_Shipping_Method';
-		}
-
-		$methods[ 'ongkoskirim-id' ] = 'Ongkoskirim_Id_Shipping_Method';
-
+		$methods[] = 'Ongkoskirim_Id_Shipping_Method';
 		return $methods;
 	}
 
@@ -147,8 +142,8 @@ class Ongkoskirim_Id_Public {
 		if(($key = array_search("update_totals_on_change", $fields[$type.'_country']['class'])) !== false) {
 			unset($fields[$type.'_country']['class'][$key]);
 		}
-		$fields[$type.'_state']['placeholder']	= __( 'Pilih Provinsi', 'ongkoskirim-id');
-		$fields[$type.'_state']['label']	= __( 'Provinsi', 'ongkoskirim-id');
+		$fields[$type.'_state']['placeholder']	= __( 'Pilih Provinsi', 'ongkoskirim-id' );
+		$fields[$type.'_state']['label']	= __( 'Provinsi', 'ongkoskirim-id' );
 
 		$fields[$type.'_city']		= $this->get_field_city();
 		$fields[$type.'_district']		= $this->get_field_district();
@@ -184,8 +179,8 @@ class Ongkoskirim_Id_Public {
 			//'class' => array( 'form-row-wide',"update_totals_on_change" ),
 			'options' => array('' => ''),
 			'required' => TRUE,
-			'placeholder' => __( 'Pilih Kota / Kabupaten', 'ongkoskirim-id'),
-			'label' => __( 'Kota / Kabupaten', 'ongkoskirim-id')
+			'placeholder' => __( 'Pilih Kota / Kabupaten', 'ongkoskirim-id' ),
+			'label' => __( 'Kota / Kabupaten', 'ongkoskirim-id' )
 		);
 
 		return $field_kota;
@@ -197,8 +192,8 @@ class Ongkoskirim_Id_Public {
 			'class' => array( 'form-row-wide', "address-field", "update_totals_on_change" ),
 			'options' => array('' => ''),
 			'required' => TRUE,
-			'placeholder' => __( 'Pilih Kecamatan', 'ongkoskirim-id'),
-			'label' => __( 'Kecamatan', 'ongkoskirim-id')
+			'placeholder' => __( 'Pilih Kecamatan', 'ongkoskirim-id' ),
+			'label' => __( 'Kecamatan', 'ongkoskirim-id' )
 		);
 
 		return $field_kota;
@@ -229,7 +224,7 @@ class Ongkoskirim_Id_Public {
 		$lang['pilih_kota']	= __("Pilih Kota");
 		$lang['loading']	= __("Loading");
 		
-		wp_localize_script( $this->plugin_name,'ongkoskirim-id',
+		wp_localize_script( $this->plugin_name, 'ongkoskirim_id',
 			array(
 				'ajax_url' => admin_url( 'admin-ajax.php' ),
 				'cities' => $cities,

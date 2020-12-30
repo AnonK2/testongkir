@@ -22,8 +22,8 @@ class Ongkoskirim_Id_Shipping_Method extends WC_Shipping_Method {
      */
     public function __construct() {
         $this->id                 = 'ongkoskirim-id';
-        $this->method_title       = __( 'OngkosKirim.id', 'ongkoskirim-id');
-        $this->method_description = __( 'Ongkos Kirim untuk ekspedisi Indonesia (JNE, Tiki, Wahana, dll)', 'ongkoskirim-id');
+        $this->method_title       = __( 'OngkosKirim.id', 'ongkoskirim-id' );
+        $this->method_description = __( 'Ongkos Kirim untuk ekspedisi Indonesia (JNE, Tiki, Wahana, dll)', 'ongkoskirim-id' );
 
         // Availability & Countries
         $this->availability = 'including';
@@ -32,7 +32,7 @@ class Ongkoskirim_Id_Shipping_Method extends WC_Shipping_Method {
         $this->init();
 
         $this->enabled = isset( $this->settings['enabled'] ) ? $this->settings['enabled'] : 'yes';
-        $this->title = isset( $this->settings['title'] ) ? $this->settings['title'] : __( 'OngkosKirim.id Shipping', 'ongkoskirim-id');
+        $this->title = isset( $this->settings['title'] ) ? $this->settings['title'] : __( 'OngkosKirim.id Shipping', 'ongkoskirim-id' );
 
         $this->wc_assets_path	= str_replace( array( 'http:', 'https:' ), '', WC()->plugin_url() ) . '/assets/';
 
@@ -81,9 +81,9 @@ class Ongkoskirim_Id_Shipping_Method extends WC_Shipping_Method {
         $this->form_fields = array(
 
             'enabled' => array(
-                'title' => __( 'Enable', 'ongkoskirim-id'),
+                'title' => __( 'Enable', 'ongkoskirim-id' ),
                 'type' => 'checkbox',
-                'description' => __( 'Aktifkan plugin pengiriman ini', 'ongkoskirim-id'),
+                'description' => __( 'Aktifkan plugin pengiriman ini', 'ongkoskirim-id' ),
                 'default' => 'yes'
             )
         );
@@ -166,8 +166,6 @@ class Ongkoskirim_Id_Shipping_Method extends WC_Shipping_Method {
             );
             $this->add_rate( $rate );
         }
-
-     
 
     }
 

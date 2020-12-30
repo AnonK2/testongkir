@@ -174,8 +174,8 @@ class Ongkoskirim_Id_Admin {
 	 */
 	public function add_settings_link( $links ){
 		$plugin_links = array(
-			'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=shipping&section=ongkoskirim-id' ) . '">' . __( 'Settings', 'ongkoskirim-id') . '</a>',
-			'<a href="' . $this->docs_url . '" target="new">' . __( 'Docs', 'ongkoskirim-id') . '</a>',
+			'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=shipping&section=ongkoskirim-id' ) . '">' . __( 'Settings', 'ongkoskirim-id' ) . '</a>',
+			'<a href="' . $this->docs_url . '" target="new">' . __( 'Docs', 'ongkoskirim-id' ) . '</a>',
 		);
 
 		return array_merge( $plugin_links, $links );
